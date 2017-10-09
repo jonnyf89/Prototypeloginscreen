@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    tools:context="com.ditkevinstreet.prototypeloginscreen.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/TitleText"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/lightbulbImage"
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Title"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="43dp"
+            android:contentDescription="@string/lightbulbImageDesc"
+            app:srcCompat="@drawable/lightbulb" />
+
+
+        <TextView
+            android:id="@+id/Instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/lightbulbImage"
+            android:text="@string/instructionsText"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Instructions"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/emailText"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Email"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:hint="@string/passwordText"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="@string/submitButtonText"
+            android:layout_below="@+id/Password"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/SignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SignOutButtonText"
+            android:layout_marginTop="47dp"
+            android:layout_alignTop="@+id/Submit"
+            android:layout_alignStart="@+id/Submit" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

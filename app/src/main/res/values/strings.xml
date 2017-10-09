@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Prototype log in screen</string>
+    <string name="TitleText">ADHD Mate</string>
+    <string name="instructionsText">Please enter your log in details</string>
+    <string name="emailText">Email</string>
+    <string name="passwordText">Password</string>
+    <string name="submitButtonText">Submit</string>
+    <string name="lightbulbImageDesc">An image of a lightbulb serving as a logo</string>
+    <string name="SignOutButtonText">Sign Out</string>
+</resources>
