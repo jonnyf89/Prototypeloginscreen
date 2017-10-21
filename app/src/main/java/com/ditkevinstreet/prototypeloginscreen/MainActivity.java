@@ -1,5 +1,6 @@
 package com.ditkevinstreet.prototypeloginscreen;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     // UI References
     private EditText mEmail, mPassword;
-    private Button btnSubmit, btnSignOut;
+    private Button btnSubmit, btnSignOut, btnAddToDatabase;
 
 
     @Override
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.Password);
         btnSubmit = (Button) findViewById(R.id.Submit);
         btnSignOut = (Button) findViewById(R.id.SignOut);
+        btnAddToDatabase = (Button) findViewById(R.id.add_item_screen);
 
 
 
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) { //this if statement probably isnt necessary as the else code wont be used, this prototype only allows siging in
+                if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     toastMessage("Successfully signed in with: " + user.getEmail());
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                     toastMessage("Successfully signed out.");
                 }
-                // ...
+
             }
         };
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mAuth.signOut();
                 toastMessage("Signed out");
+            }
+        });
+        btnAddToDatabase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddItemsToDatabase.class);
+                startActivity(intent);
             }
         });
     }
