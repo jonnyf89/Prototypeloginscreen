@@ -7,4 +7,7 @@
     <string name="submitButtonText">Submit</string>
     <string name="lightbulbImageDesc">An image of a lightbulb serving as a logo</string>
     <string name="SignOutButtonText">Sign Out</string>
+    <string name="AddSomethingToDatabaseText">Add Something</string>
+    <string name="AddSomethingToDatabaseButtonText">Add To Database</string>
+    <string name="btnAddItemsToDatabaseText">Add Items To Database</string>
 </resources>

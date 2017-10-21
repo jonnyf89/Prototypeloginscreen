@@ -29,12 +29,11 @@
             android:id="@+id/lightbulbImage"
             android:layout_width="match_parent"
             android:layout_height="154dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/Title"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="43dp"
             android:contentDescription="@string/lightbulbImageDesc"
-            app:srcCompat="@drawable/lightbulb" />
+            app:srcCompat="@drawable/lightbulb"
+            android:layout_below="@+id/Title"
+            android:layout_alignParentStart="true" />
 
 
         <TextView
@@ -52,43 +51,49 @@
             android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/Instructions"
-            android:layout_marginTop="30dp"
             android:ems="10"
             android:hint="@string/emailText"
             android:inputType="textEmailAddress"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_below="@+id/Instructions"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/Email"
-            android:layout_marginTop="27dp"
             android:ems="10"
             android:hint="@string/passwordText"
             android:inputType="textPassword"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_below="@+id/Email"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:id="@+id/Submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:text="@string/submitButtonText"
             android:layout_below="@+id/Password"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:text="@string/submitButtonText" />
 
         <Button
             android:id="@+id/SignOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/SignOutButtonText"
-            android:layout_marginTop="47dp"
+            android:layout_alignStart="@+id/Submit"
             android:layout_alignTop="@+id/Submit"
-            android:layout_alignStart="@+id/Submit" />
+            android:layout_marginTop="47dp"
+            android:text="@string/SignOutButtonText" />
+
+        <Button
+            android:id="@+id/add_item_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAddItemsToDatabaseText"
+            android:layout_below="@+id/SignOut"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
